@@ -1,0 +1,16 @@
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import ListPage from '../Components/Home/Home';
+import BlockCard from './Second-screens/BlockCard'
+const Stack = createStackNavigator();
+
+export default function Principal() {
+    return (
+
+        <Stack.Navigator>
+            <Stack.Screen name="Home" component={ListPage} />
+            <Stack.Screen name="BlockCard" component={BlockCard} />
+        </Stack.Navigator>
+
+    )
+}
