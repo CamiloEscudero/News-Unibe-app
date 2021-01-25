@@ -1,7 +1,8 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import ListPage from '../Components/Home/Home';
-import BlockCard from './Second-screens/BlockCard'
+import BlockCard from '../Components/Second-screens/BlockCard';
+import Index from './Index'
 const Stack = createStackNavigator();
 
 export default function Principal() {

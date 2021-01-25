@@ -11,7 +11,7 @@ export default class Logo extends Component  {
 		return(
 			<View style={styles.container}>
 				<Image  style={{width:150, height: 150,resizeMode:'center'}}
-          			source={{uri:'https://lh3.googleusercontent.com/rWHkuLW50GVORhd1jJWpewB8HXeG_ZbTc_8MqdCRNrt-rwZikxxo1lgAmkk2vGwVdnogCg=s85'}}/>	
+          			source={{uri:'https://i.ibb.co/HTgb4WX/logo-unibe-color.png'}}/>	
   			</View>
 			)
 	}

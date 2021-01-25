@@ -14,7 +14,7 @@ export default function Login({ navigation }) {
     const users = firebase.firestore().collection('user');
     const [modalVisible, setModalVisible] = useState(false);
 
-    function ingresar() {
+    function loginUser() {
         users.where('emailPersonal', '==', user).get()
             .then((snapshot) => {
                 snapshot.forEach((doc) => {
@@ -24,19 +24,13 @@ export default function Login({ navigation }) {
                     } else {
                         setModalVisible(true);
                     }
-                   
-
                 })
             }).catch((err) => {
                 setModalVisible(true);
             })
     }
-
-    {/* Codigo Profe */ }
     return (
-
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-
             <Modal
                 animationType="fade"
                 transparent={true}
@@ -80,7 +74,7 @@ export default function Login({ navigation }) {
 
 
             <View style={styles.textInput}>
-                <TouchableOpacity style={styles.openButton} onPress={ingresar}><Text
+                <TouchableOpacity style={styles.openButton} onPress={loginUser}><Text
                     style={{ textAlign: "center" }}>Login</Text></TouchableOpacity>
             </View>
 

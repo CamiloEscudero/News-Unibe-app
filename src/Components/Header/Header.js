@@ -1,24 +1,13 @@
 import React  from 'react'
-import {View, StyleSheet, TouchableWithoutFeedback, Image } from 'react-native'
-import Icon from 'react-native-vector-icons/FontAwesome'
+import {View, StyleSheet, Image } from 'react-native'
+
 
 function Header() {
     return (
         <View style={styles.container}>
-            <TouchableWithoutFeedback>
-                <Icon
-                    name="bars"
-                    color="white"
-                    size={25}
-                />
-            </TouchableWithoutFeedback>
-            <Image style={styles.logo} source={require('../../Images/Logo_Home.png')} />
-            <Icon
-                name="search"
-                color="white"
-                size={25}
-                alignItems='center'
-            />
+            <Image style={styles.logo}
+            source={{uri:'https://i.ibb.co/d4WP1Zn/Logo-Home.png'}}/>	
+            
         </View>
     )
 }
@@ -30,11 +19,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         backgroundColor: 'black',
-        marginHorizontal: 10
+        marginHorizontal: 50
     },
     logo: {
-        width: 100,
-        height: 40,
+        width: 250,
+        height: 80,
         resizeMode:'contain'
     }
 

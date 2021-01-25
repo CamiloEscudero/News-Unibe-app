@@ -41,19 +41,7 @@ export default function Register({navigation}) {
 
     return (
         <SafeAreaView style={styles.container}>
-             
-             <Text>Register Screen</Text>
-            
             <Logo/>
-
-
-            <View style={styles.textInput}>
-                <Input
-                    placeholder='Username'
-                    onChangeText={returnOnChangeText => setUser(returnOnChangeText)}
-                />
-            </View>
-
             <View style={styles.textInput}>
                 <Input
                     placeholder='Email'

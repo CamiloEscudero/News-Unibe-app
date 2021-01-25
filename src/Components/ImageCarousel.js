@@ -1,14 +1,21 @@
 import React, { useRef } from "react";
 import { View, Image, ScrollView, Dimensions, Text, StyleSheet } from "react-native";
 
+
+
 const { width } = Dimensions.get("window");
 const height = width * 0.6; //75%
 
+
+
 const images = [
-    'https://cdmxhoy.com/wp-content/uploads/2020/04/vacunas.jpg',
-    'http://1.bp.blogspot.com/-ULhcdxgdgjM/UAFXS44FX2I/AAAAAAAADwI/Q8943OiXwmA/s1600/animal-images-2.jpg',
-    'https://cdn.atomix.vg/wp-content/uploads/2017/05/IntelCorei9.jpg',
+    'https://drive.google.com/file/d/1Ei3kFBWn-PqK8FCbS41HSjF0D6c_8ice/view',
+    'https://i.blogs.es/594843/chrome/450_1000.jpg',
+    'https://1.bp.blogspot.com/-79DdxzZkDog/T76QV6v5IuI/AAAAAAAAAEY/6DzpGZzsmfA/s320/homerocatolico_456_336.jpg'
 ]
+  
+
+
 
 export default class slider extends React.Component {
     state = {

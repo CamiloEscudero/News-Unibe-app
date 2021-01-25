@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { View, Image, ScrollView, StyleSheet } from "react-native";
 import Title from "./Title"
 import Body from "./Body"
-import Header from '../../Components/Header/Header'
+import Header from '../Header/Header'
 import { color } from 'react-native-reanimated';
 import firebase from "../../Firebase/Firebase";
 import "firebase/firestore";
@@ -41,7 +41,6 @@ function BlockCard() {
             <Header />
 
             <ScrollView>
-
                 <Image
                     source={{ uri: data.photo }}
                     style={{ width: '100%', height: 200, resizeMode: 'contain' }} />
