@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text } from 'react-native';
 
-const Title = ({ children, numberOfLines = 2, size = 30 }) => {
+const Title = ({ children, numberOfLines = 5, size = 25 }) => {
     return (
         <Text
             numberOfLines={numberOfLines}

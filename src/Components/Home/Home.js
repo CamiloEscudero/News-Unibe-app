@@ -64,21 +64,22 @@ export default function ListPage({ navigation }) {
     return (
         <View>
             {
-                isLoading ? (<ActivityIndicator />)
-                    : (
-                        <SafeAreaView style={styles.container}>
-                            <Header />
-                            <ImageCarousel images={images}/>
-                            <FlatList
-                                data={data}
-                                keyExtractor={item => item.id}
-                                renderItem={({ item }) => (
-                                    <ItemList element={item} navigation={navigation} />
-                                )}
-                            />
-
-                        </SafeAreaView>
-                    )
+               isLoading ? (<ActivityIndicator />)
+               : (
+                   <SafeAreaView style={styles.container}>
+                       <Header/>
+                       <ScrollView styles={styles.listNews}>
+                       <ImageCarousel images={images}/>
+                       <FlatList
+                           data={data}
+                           keyExtractor={item => item.id}
+                           renderItem={({ item }) => (
+                               <ItemList element={item} navigation={navigation} />
+                           )}
+                       />
+                       </ScrollView>
+                   </SafeAreaView>
+               )
             }
         </View>
 
@@ -90,6 +91,12 @@ const styles = StyleSheet.create({
     container: {
         paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
     },
+
+    listNews:{
+    paddingTop:8,
+    marginBottom:30,
+    },
+    
     item: {
         backgroundColor: '#f9c2ff'
     }

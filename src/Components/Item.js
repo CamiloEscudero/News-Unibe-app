@@ -45,7 +45,7 @@ export default function Item(props) {
                         </Text>
                     </View>
                     <View>
-                        <Text>
+                        <Text numberOfLines={2}>
                             {props.element.Description}
                         </Text>
                     </View>
@@ -62,7 +62,9 @@ const styles = StyleSheet.create({
         marginVertical: 5,
         marginHorizontal: 5,
         flexDirection: 'row',
-        width: screenWidth - 10
+        width: screenWidth - 10,
+        borderRadius:8,
+        overflow: 'hidden'
     },
 
     containerImage: {

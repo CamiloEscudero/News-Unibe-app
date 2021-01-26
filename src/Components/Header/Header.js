@@ -17,16 +17,16 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         height: 40,
         alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         backgroundColor: 'black',
-        marginHorizontal: 50
     },
     logo: {
-        width: 250,
-        height: 80,
+        width: 100,
+        height: 40,
         resizeMode:'contain'
     }
 
 })
+
 
 export default Header

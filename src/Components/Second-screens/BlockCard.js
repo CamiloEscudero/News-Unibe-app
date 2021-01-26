@@ -3,7 +3,6 @@ import { View, Image, ScrollView, StyleSheet } from "react-native";
 import Title from "./Title"
 import Body from "./Body"
 import Header from '../Header/Header'
-import { color } from 'react-native-reanimated';
 import firebase from "../../Firebase/Firebase";
 import "firebase/firestore";
 import { useRoute } from '@react-navigation/native'
@@ -46,6 +45,7 @@ function BlockCard() {
                     style={{ width: '100%', height: 200, resizeMode: 'contain' }} />
                 <View style={styles.contentContainer} >
                     <Title>{data.Title}</Title>
+                    <Body style={{color:'#ffff1a'}}> {data.Date}</Body>
                     <Body>
                         {data.Description}
                     </Body>
@@ -57,13 +57,12 @@ function BlockCard() {
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 15,
-        borderRadius: 8,
-        overflow: 'hidden',
-        backgroundColor: 'black'
+        paddingTop: 10,
+        backgroundColor: 'black',
+        marginBottom:40
     },
     contentContainer: {
-        padding: 15,
+        paddingHorizontal: 10,
     }
 })
 

@@ -71,17 +71,15 @@ export default function Login({ navigation }) {
                     onChangeText={returnOnChangeText => setPassword(returnOnChangeText)} />
             </View>
 
-
-
             <View style={styles.textInput}>
-                <TouchableOpacity style={styles.openButton} onPress={loginUser}><Text
-                    style={{ textAlign: "center" }}>Login</Text></TouchableOpacity>
+                <TouchableOpacity style={styles.ButtonLogin} onPress={loginUser}><Text
+                    style={{ textAlign: "center",fontWeight: 'bold' }}>Login</Text></TouchableOpacity>
             </View>
 
             <View style={styles.textInput}>
 
-                <TouchableOpacity style={styles.openButton}><Text
-                    style={{ textAlign: "center" }}
+                <TouchableOpacity style={styles.ButtonRegister}><Text
+                    style={{ textAlign: "center",fontWeight: 'bold',color:"white"}}
                     onPress={() => navigation.navigate('Register')}
                 >Register</Text></TouchableOpacity>
 
@@ -95,8 +93,16 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
     },
-    openButton: {
+    ButtonLogin: {
         backgroundColor: "#FFFF00",
+        borderRadius: 5,
+        padding: 10,
+        elevation: 2,
+        margin: 10,
+        textAlign: 'center'
+    },
+    ButtonRegister: {
+        backgroundColor: "#00008B",
         borderRadius: 5,
         padding: 10,
         elevation: 2,
