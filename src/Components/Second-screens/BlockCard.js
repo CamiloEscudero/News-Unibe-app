@@ -45,9 +45,10 @@ function BlockCard() {
                     style={{ width: '100%', height: 200, resizeMode: 'contain' }} />
                 <View style={styles.contentContainer} >
                     <Title>{data.Title}</Title>
-                    <Body style={{color:'#ffff1a'}}> {data.Date}</Body>
                     <Body>
+                        {data.Date}
                         {data.Description}
+
                     </Body>
                 </View>
             </ScrollView>

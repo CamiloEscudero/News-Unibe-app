@@ -30,7 +30,7 @@ export default function ListPage({ navigation }) {
                     id: doc.id,
                     Title: doc.data().title,
                     Date: doc.data().date,
-                    Resume: doc.data().resume,
+                    Description: doc.data().description,
                     photo: doc.data().image
                 }
                 newsList.push(newFromFirebase);

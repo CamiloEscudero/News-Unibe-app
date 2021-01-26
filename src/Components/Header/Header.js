@@ -21,8 +21,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
     },
     logo: {
-        width: 100,
-        height: 40,
+        width: 120,
+        height: 60,
         resizeMode:'contain'
     }
 
