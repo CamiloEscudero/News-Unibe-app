@@ -19,11 +19,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'black',
+        paddingBottom:8
     },
     logo: {
-        width: 120,
-        height: 60,
-        paddingBottom:5,
+        width: 150,
+        height: 75,
+     
         resizeMode:'contain'
     }
 
