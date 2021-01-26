@@ -13,21 +13,19 @@ function Header() {
 }
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 5,
         flexDirection: 'row',
-        height: 40,
+        height: 50,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'black',
-        paddingBottom:8
+      
     },
     logo: {
+        
         width: 150,
-        height: 75,
-     
+        height: 50,
         resizeMode:'contain'
     }
-
 })
 
 

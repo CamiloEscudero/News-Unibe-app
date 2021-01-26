@@ -44,7 +44,8 @@ export default class slider extends React.Component {
 const style = StyleSheet.create({
     container: {
         width,
-        height
+        height,
+        marginTop:2
     },
     scroll: {
         width,
