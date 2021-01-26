@@ -33,16 +33,16 @@ export default class slider extends React.Component {
                     style={style.container}
                 >
                     {
-                        images.map((image) => (
+                        this.props.images.map((image) => (
                             <Image
-                                source={{ uri: image }}
+                                source={{ uri: image.photo }}
                                 style={style.image} />
                         ))
                     }
                 </ScrollView>
                 <View style={style.pagination}>
                     {
-                        images.map((i, k) => (
+                         this.props.images.map((i, k) => (
                             <Text key={k} style={k == this.state.active ? style.paginagActiveText : style.paginagText}>*</Text>
                         ))
                     }

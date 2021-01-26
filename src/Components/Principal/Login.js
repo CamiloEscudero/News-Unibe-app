@@ -54,9 +54,9 @@ export default function Login({ navigation }) {
                 </View>
             </Modal>
 
-
-
-            <Logo />
+            <View>
+                <Logo />
+            </View>
             <View style={styles.textInput}>
                 <Input
                     placeholder='Username or email addres'

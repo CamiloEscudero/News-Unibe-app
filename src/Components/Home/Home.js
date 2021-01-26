@@ -20,6 +20,7 @@ import ImageCarousel from "../ImageCarousel"
 export default function ListPage({ navigation }) {
     const news = firebase.firestore().collection('News');
     const [data, setData] = useState([]);
+    const [images, setImages] = useState([]);
     const [isLoading, setLoading] = useState(true);
     const synch = () => {
         let newsList = [];
@@ -29,7 +30,7 @@ export default function ListPage({ navigation }) {
                     id: doc.id,
                     Title: doc.data().title,
                     Date: doc.data().date,
-                    Description: doc.data().description,
+                    Resume: doc.data().resume,
                     photo: doc.data().image
                 }
                 newsList.push(newFromFirebase);
@@ -39,9 +40,22 @@ export default function ListPage({ navigation }) {
         }).finally(() => setLoading(false));
     }
 
+    const getImages = () => {
+        let newsList = [];
+        news.limit(4).get().then((snapshot) => {
+            snapshot.forEach((doc) => {
+                let newFromFirebase = {
+                    photo: doc.data().image
+                }
+                newsList.push(newFromFirebase);
+            }
+            )
+            setImages(newsList);
+        }).finally(() => synch());
+    }
     useEffect(() => {
         let isMounted = true;
-        synch();
+        getImages();
         return () => {
             isMounted = false
         }
@@ -53,8 +67,8 @@ export default function ListPage({ navigation }) {
                 isLoading ? (<ActivityIndicator />)
                     : (
                         <SafeAreaView style={styles.container}>
-                            <Header/>
-                            <ImageCarousel/>
+                            <Header />
+                            <ImageCarousel images={images}/>
                             <FlatList
                                 data={data}
                                 keyExtractor={item => item.id}

@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@expo/match-media": "0.0.0-beta.2",
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/drawer": "^5.11.4",
     "@react-navigation/material-top-tabs": "^5.3.10",
@@ -29,7 +30,8 @@
     "react-native-swiper-flatlist": "^2.0.4",
     "react-native-tab-view": "^2.15.2",
     "react-native-vector-icons": "^7.1.0",
-    "react-native-web": "~0.13.12"
+    "react-native-web": "~0.13.12",
+    "react-responsive": "^8.2.0"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"
