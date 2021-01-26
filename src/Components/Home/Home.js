@@ -89,12 +89,16 @@ export default function ListPage({ navigation }) {
 const styles = StyleSheet.create({
 
     container: {
-        paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
-    },
+        paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+        paddingBottom: 30,
+        backgroundColor: 'black',
+        marginBottom: 60
 
+    },
     listNews:{
     paddingTop:8,
     marginBottom:30,
+    
     },
     
     item: {
