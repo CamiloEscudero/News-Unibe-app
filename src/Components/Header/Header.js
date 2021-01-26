@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
     logo: {
         width: 120,
         height: 60,
+        paddingBottom:5,
         resizeMode:'contain'
     }
 

@@ -40,7 +40,7 @@ export default function Login({ navigation }) {
                 }}>
                 <View style={styles.centeredView}>
                     <View style={styles.modalView}>
-                        <Text style={styles.modalText}>Datos incorrectos</Text>
+                        <Text style={styles.modalText}>Wrong Data</Text>
 
                         <TouchableHighlight
                             style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
@@ -48,7 +48,7 @@ export default function Login({ navigation }) {
                                 setModalVisible(!modalVisible);
                             }}
                         >
-                            <Text style={styles.textStyle}>ok</Text>
+                            <Text style={styles.textStyle}>OK</Text>
                         </TouchableHighlight>
                     </View>
                 </View>
