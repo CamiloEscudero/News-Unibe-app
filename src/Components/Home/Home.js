@@ -8,7 +8,6 @@ import {
     SafeAreaView,
     ScrollView,
     ActivityIndicator,
-    TouchableOpacity
 } from "react-native";
 import ItemList from '../Item'
 import firebase from "../../Firebase/Firebase";
